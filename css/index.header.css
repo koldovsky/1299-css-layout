@@ -1,5 +1,14 @@
 .header {
-  background-color: var(--secondary-background-color);
+  background-color: var(--accent-color);
+
+  .header__title,
+  .header__logo {
+    font-size: 3.5rem;
+    color: var(--text-color);
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+  }
 
   .header__nav {
     padding: 0 15px;
@@ -8,16 +17,7 @@
   @media (min-width: 600px) {
     .header__nav {
       display: flex;
-      align-items: center;
     }
-  }
-
-  .header__logo,
-  .header__title {
-    font-size: 3.5rem;
-    text-align: center;
-    text-transform: uppercase;
-    font-weight: bold;
   }
 
   .header__menu {
@@ -25,7 +25,7 @@
     flex-direction: column;
 
     .menu__item {
-      color: var(--primary-text-color);
+      color: var(--text-color);
       text-decoration: none;
     }
 
@@ -37,8 +37,9 @@
   @media (min-width: 600px) {
     .header__menu {
       flex-direction: row;
-      flex: 1;
+      align-items: center;
       justify-content: space-around;
+      flex: 1;
     }
   }
 
@@ -49,12 +50,12 @@
     background-position: center;
     min-height: 500px;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    flex-direction: column;
+  }
 
-    .header__title {
-        color: var(--secondary-text-color);
-    }
+  .header__title {
+    color: var(--accent-color);
   }
 }
